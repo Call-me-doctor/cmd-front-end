@@ -31,12 +31,27 @@
       border: 1px solid #fffb002d; }
 
 .menu-list-container {
-  z-index: 2;
   position: fixed;
-  min-width: 250px;
-  background-color: white;
   height: 100%;
-  border-right: 1px solid #4b4b4b2d; }
+  display: flex;
+  width: 100%; }
+  .menu-list-container .menu-list {
+    background-color: white;
+    width: 250px;
+    border-right: 1px solid #4b4b4b2d; }
+  .menu-list-container .toggle {
+    width: calc(100% - 250px);
+    background-color: #4b4b4b2d; }
+
+.menu-list-container-minimize {
+  width: 0; }
+  .menu-list-container-minimize .menu-list {
+    display: none; }
+  .menu-list-container-minimize .toggle {
+    display: none; }
+
+.hide-menu {
+  display: none; }
 
 body {
   margin: 0px;

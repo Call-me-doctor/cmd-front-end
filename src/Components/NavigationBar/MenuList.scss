@@ -1,8 +1,30 @@
 .menu-list-container{
-    z-index: 2;
     position: fixed;
-    min-width: 250px;
-    background-color: white;
     height: 100%;
-    border-right: 1px solid $bg-color-fade;
+    display: flex;
+    width: 100%;
+    .menu-list {
+        background-color: white;
+        width: 250px;
+        border-right: 1px solid $bg-color-fade;
+    }
+
+    .toggle {
+        width: calc(100% - 250px);
+        background-color: $bg-color-fade;
+    }
+}
+
+.menu-list-container-minimize {
+    width: 0;
+    .menu-list {
+        display: none;
+    }
+    .toggle {
+        display: none;
+    }
+}
+
+.hide-menu {
+    display: none;
 }
