@@ -1,10 +1,13 @@
 import React from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import MenuList from './MenuList';
+
 class NavigationBar extends React.Component {
     render(){
         return (
             <div className="navbar">
+                <MenuList />
                 <div className="logo-menu">
                     <div className="menu">
                         <MenuIcon />
