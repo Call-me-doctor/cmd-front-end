@@ -1,0 +1,49 @@
+$bg-color: #4b4b4b;
+$text-color: #FFFC00;
+$text-color-fade: #fffb002d;
+
+.navbar {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    background-color: $bg-color;
+    justify-content: space-between;
+    .logo-menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        align-items: center;
+        color: $text-color;
+
+        .menu {
+            padding: 5px;
+            cursor: pointer;
+        }
+        .menu:hover {
+            background-color: $text-color-fade;
+            border-radius: 50%;
+        }
+
+        .logo{
+            img {
+                height: 60px;
+            }
+        }
+    }
+
+    .login {
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        button {
+            color: $text-color;
+            background-color: inherit;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border:  1px solid $text-color-fade;
+        }
+    }
+}

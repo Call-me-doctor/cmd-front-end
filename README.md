@@ -10,3 +10,5 @@ code.
 
 Import all your ".scss" files into style-imports.scss file, make sure you use 
 scss syntax not css.
+
+css class name should written in small letters and words seperated by dashes
