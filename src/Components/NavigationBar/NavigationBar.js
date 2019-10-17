@@ -4,12 +4,25 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MenuList from './MenuList';
 
 class NavigationBar extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            showMenu: false,
+        }
+    }
+
+    toggleMenu = () => {
+        this.setState({
+            showMenu: !this.state.showMenu,
+        })
+    }
+
     render(){
         return (
             <div className="navbar">
-                <MenuList />
+                <MenuList showMenu={this.state.showMenu} toggle={this.toggleMenu}/>
                 <div className="logo-menu">
-                    <div className="menu">
+                    <div className="menu" onClick={this.toggleMenu}>
                         <MenuIcon />
                     </div>
                     <div className="logo">
