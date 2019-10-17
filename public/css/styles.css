@@ -20,11 +20,18 @@
     align-items: center; }
     .navbar .login button {
       color: #FFFC00;
+      padding: 5px;
       background-color: inherit;
       border: none;
-      cursor: pointer; }
+      cursor: pointer;
+      box-shadow: 0 0 5px 1px #FFFC00;
+      border-radius: 10px; }
     .navbar .login button:hover {
       border: 1px solid #fffb002d; }
+    .navbar .login form {
+      display: flex;
+      min-width: 450px;
+      justify-content: space-evenly; }
 
 @media (max-width: 768px) {
   .logo-menu .menu {
@@ -36,9 +43,15 @@
     border-radius: 10px; }
   .logo-menu .menu:hover {
     background-color: #fffb002d;
-    border-radius: 50%; } }
+    border-radius: 50%; }
+
+  .navbar .login form {
+    display: none; } }
 @media (min-width: 769px) {
   .logo-menu .menu {
+    display: none; }
+
+  .navbar .login .mobile-login {
     display: none; } }
 @media (max-width: 768px) {
   .menu-list-container {
