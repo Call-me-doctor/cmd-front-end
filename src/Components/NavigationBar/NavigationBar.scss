@@ -23,19 +23,6 @@
         display: flex;
         padding: 0 10px;
         align-items: center;
-        button {
-            color: $text-color;
-            padding: 5px;
-            background-color: inherit;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 0 5px 1px $text-color;
-            border-radius: 10px;
-        }
-
-        button:hover {
-            border:  1px solid $text-color-fade;
-        }
 
         form {
             display: flex;
