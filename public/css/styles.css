@@ -10,16 +10,6 @@
     padding: 0px 10px;
     align-items: center;
     color: #FFFC00; }
-    .navbar .logo-menu .menu {
-      display: flex;
-      padding: 5px;
-      cursor: pointer;
-      border: 1px solid #FFFC00;
-      box-shadow: 0 0 5px 1px #FFFC00;
-      border-radius: 10px; }
-    .navbar .logo-menu .menu:hover {
-      background-color: #fffb002d;
-      border-radius: 50%; }
     .navbar .logo-menu .logo {
       padding-left: 10px; }
       .navbar .logo-menu .logo img {
@@ -36,6 +26,20 @@
     .navbar .login button:hover {
       border: 1px solid #fffb002d; }
 
+@media (max-width: 768px) {
+  .logo-menu .menu {
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #FFFC00;
+    box-shadow: 0 0 5px 1px #FFFC00;
+    border-radius: 10px; }
+  .logo-menu .menu:hover {
+    background-color: #fffb002d;
+    border-radius: 50%; } }
+@media (min-width: 769px) {
+  .logo-menu .menu {
+    display: none; } }
 .menu-list-container {
   position: fixed;
   height: 100%;

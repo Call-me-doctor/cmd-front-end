@@ -11,19 +11,6 @@
         align-items: center;
         color: $text-color;
 
-        .menu {
-            display: flex;
-            padding: 5px;
-            cursor: pointer;
-            border: 1px solid $text-color;
-            box-shadow: 0 0 5px 1px $text-color;
-            border-radius: 10px;
-        }
-        .menu:hover {
-            background-color: $text-color-fade;
-            border-radius: 50%;
-        }
-
         .logo{
             padding-left: 10px;
             img {
@@ -45,6 +32,31 @@
 
         button:hover {
             border:  1px solid $text-color-fade;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-menu {
+        .menu {
+            display: flex;
+            padding: 5px;
+            cursor: pointer;
+            border: 1px solid $text-color;
+            box-shadow: 0 0 5px 1px $text-color;
+            border-radius: 10px;
+        }
+        .menu:hover {
+            background-color: $text-color-fade;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .logo-menu {
+        .menu {
+            display: none;
         }
     }
 }
