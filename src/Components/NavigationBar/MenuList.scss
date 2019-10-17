@@ -1,66 +1,68 @@
-.menu-list-container{
-    position: fixed;
-    height: 100%;
-    display: flex;
-    width: 100%;
-    z-index: 2;
-    transition: width ease-out 0.2s;
-    -webkit-transition: width ease-out 0.2s;
-    .menu-list {
-        display: block;
-        background-color: white;
-        width: 300px;
-        border-right: 1px solid $bg-color-fade;
-        transition: display ease-out 0.25s;
-        -webkit-transition: display ease-out 0.25s;
+@media (max-width: 768px) {
+    .menu-list-container{
+        position: fixed;
+        height: 100%;
+        display: flex;
+        width: 100%;
+        z-index: 2;
+        transition: width ease-out 0.2s;
+        -webkit-transition: width ease-out 0.2s;
+        .menu-list {
+            display: block;
+            background-color: white;
+            width: 300px;
+            border-right: 1px solid $bg-color-fade;
+            transition: display ease-out 0.25s;
+            -webkit-transition: display ease-out 0.25s;
 
-        .menu-list-header {
-            display: flex;
-            justify-content: start;
-            padding: 2px 10px;
-            align-items: center;
-            height: $nav-bar-height;
-            color: $bg-color;
-            border-bottom: 0.5px solid $bg-color-fade;
-
-            .menu-close {
+            .menu-list-header {
                 display: flex;
-                padding: 5px;
-                cursor: pointer;
-                border: 1px solid $bg-color;
-                box-shadow: 0 0 5px 1px $bg-color;
-                border-radius: 10px;
+                justify-content: start;
+                padding: 2px 10px;
+                align-items: center;
+                height: $nav-bar-height;
+                color: $bg-color;
+                border-bottom: 0.5px solid $bg-color-fade;
+
+                .menu-close {
+                    display: flex;
+                    padding: 5px;
+                    cursor: pointer;
+                    border: 1px solid $bg-color;
+                    box-shadow: 0 0 5px 1px $bg-color;
+                    border-radius: 10px;
+                }
+                .menu-close:hover {
+                    background-color: $bg-color-fade;
+                    border-radius: 50%;
+                }
+        
+                .logo{
+                    img {
+                        height: $nav-bar-height;
+                    }
+                }
             }
-            .menu-close:hover {
-                background-color: $bg-color-fade;
-                border-radius: 50%;
-            }
-    
-            .logo{
-                img {
-                    height: $nav-bar-height;
+
+            div.link {
+                height: 50px;
+                font-size: 25px;
+                font-weight: 700;
+                border-bottom: 0.5px solid $bg-color-fade;
+                padding-left: 10px;
+                display: flex;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    color: black;
                 }
             }
         }
 
-        div.link {
-            height: 50px;
-            font-size: 25px;
-            font-weight: 700;
-            border-bottom: 0.5px solid $bg-color-fade;
-            padding-left: 10px;
-            display: flex;
-            align-items: center;
-            a {
-                text-decoration: none;
-                color: black;
-            }
+        .toggle {
+            width: calc(100% - 300px);
+            background-color: $bg-color-fade;
         }
-    }
-
-    .toggle {
-        width: calc(100% - 300px);
-        background-color: $bg-color-fade;
     }
 }
 
@@ -69,5 +71,15 @@
 
     .menu-list {
         display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-list-container{
+        display: none;
+
+    .menu-list {
+        display: none;
+    }
     }
 }
