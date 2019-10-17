@@ -49,9 +49,6 @@
     width: calc(100% - 250px);
     background-color: #4b4b4b2d; }
 
-.hide-menu {
-  display: none; }
-
 .minimize {
   width: 0px; }
   .minimize .menu-list {
