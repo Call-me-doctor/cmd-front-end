@@ -29,7 +29,11 @@ class NavigationBar extends React.Component {
                         <img src="images/logo_trans.png" alt="logo"/>
                     </div>
                 </div>
-                <div className="login"> <button> Login </button> </div>
+                <div className="login">
+                    <input type="text" placeholder="email or username"/>
+                    <input type="password" placeholder="password" />
+                    <button> Login </button>
+                </div>
             </div>
         );
     }
