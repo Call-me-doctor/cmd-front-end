@@ -41,12 +41,23 @@
   .menu-list-container .menu-list {
     display: block;
     background-color: white;
-    width: 250px;
+    width: 300px;
     border-right: 1px solid #4b4b4b2d;
     transition: display ease-out 0.25s;
     -webkit-transition: display ease-out 0.25s; }
+    .menu-list-container .menu-list div {
+      height: 50px;
+      font-size: 25px;
+      font-weight: 700;
+      border-bottom: 0.5px solid #4b4b4b2d;
+      padding-left: 10px;
+      display: flex;
+      align-items: center; }
+      .menu-list-container .menu-list div a {
+        text-decoration: none;
+        color: black; }
   .menu-list-container .toggle {
-    width: calc(100% - 250px);
+    width: calc(100% - 300px);
     background-color: #4b4b4b2d; }
 
 .minimize {

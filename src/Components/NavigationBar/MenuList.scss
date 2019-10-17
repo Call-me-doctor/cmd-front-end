@@ -9,14 +9,28 @@
     .menu-list {
         display: block;
         background-color: white;
-        width: 250px;
+        width: 300px;
         border-right: 1px solid $bg-color-fade;
         transition: display ease-out 0.25s;
         -webkit-transition: display ease-out 0.25s;
+
+        div {
+            height: 50px;
+            font-size: 25px;
+            font-weight: 700;
+            border-bottom: 0.5px solid $bg-color-fade;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
     }
 
     .toggle {
-        width: calc(100% - 250px);
+        width: calc(100% - 300px);
         background-color: $bg-color-fade;
     }
 }
