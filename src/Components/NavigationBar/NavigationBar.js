@@ -30,9 +30,12 @@ class NavigationBar extends React.Component {
                     </div>
                 </div>
                 <div className="login">
-                    <input type="text" placeholder="email or username"/>
-                    <input type="password" placeholder="password" />
-                    <button> Login </button>
+                    <form>
+                        <input type="text" placeholder="email or username"/>
+                        <input type="password" placeholder="password" />
+                        <button> Login </button>
+                    </form>
+                    <button className="mobile-login"> Login </button>
                 </div>
             </div>
         );
