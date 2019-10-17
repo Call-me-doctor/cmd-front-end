@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   width: 100%;
-  min-height: 50px;
+  min-height: 60px;
   background-color: #4b4b4b;
   justify-content: space-between; }
   .navbar .logo-menu {
@@ -11,13 +11,19 @@
     align-items: center;
     color: #FFFC00; }
     .navbar .logo-menu .menu {
+      display: flex;
       padding: 5px;
-      cursor: pointer; }
+      cursor: pointer;
+      border: 1px solid #FFFC00;
+      box-shadow: 0 0 5px 1px #FFFC00;
+      border-radius: 10px; }
     .navbar .logo-menu .menu:hover {
       background-color: #fffb002d;
       border-radius: 50%; }
-    .navbar .logo-menu .logo img {
-      height: 60px; }
+    .navbar .logo-menu .logo {
+      padding-left: 10px; }
+      .navbar .logo-menu .logo img {
+        height: 60px; }
   .navbar .login {
     display: flex;
     padding: 0 10px;
@@ -45,7 +51,27 @@
     border-right: 1px solid #4b4b4b2d;
     transition: display ease-out 0.25s;
     -webkit-transition: display ease-out 0.25s; }
-    .menu-list-container .menu-list div {
+    .menu-list-container .menu-list .menu-list-header {
+      display: flex;
+      justify-content: start;
+      padding: 2px 10px;
+      align-items: center;
+      height: 60px;
+      color: #4b4b4b;
+      border-bottom: 0.5px solid #4b4b4b2d; }
+      .menu-list-container .menu-list .menu-list-header .menu-close {
+        display: flex;
+        padding: 5px;
+        cursor: pointer;
+        border: 1px solid #4b4b4b;
+        box-shadow: 0 0 5px 1px #4b4b4b;
+        border-radius: 10px; }
+      .menu-list-container .menu-list .menu-list-header .menu-close:hover {
+        background-color: #4b4b4b2d;
+        border-radius: 50%; }
+      .menu-list-container .menu-list .menu-list-header .logo img {
+        height: 60px; }
+    .menu-list-container .menu-list div.link {
       height: 50px;
       font-size: 25px;
       font-weight: 700;
@@ -53,7 +79,7 @@
       padding-left: 10px;
       display: flex;
       align-items: center; }
-      .menu-list-container .menu-list div a {
+      .menu-list-container .menu-list div.link a {
         text-decoration: none;
         color: black; }
   .menu-list-container .toggle {
