@@ -3,10 +3,16 @@
     height: 100%;
     display: flex;
     width: 100%;
+    z-index: 2;
+    transition: width ease-out 0.2s;
+    -webkit-transition: width ease-out 0.2s;
     .menu-list {
+        display: block;
         background-color: white;
         width: 250px;
         border-right: 1px solid $bg-color-fade;
+        transition: display ease-out 0.25s;
+        -webkit-transition: display ease-out 0.25s;
     }
 
     .toggle {
@@ -15,16 +21,14 @@
     }
 }
 
-.menu-list-container-minimize {
-    width: 0;
+.hide-menu {
+    display: none;
+}
+
+.minimize {
+    width: 0px;
+
     .menu-list {
         display: none;
     }
-    .toggle {
-        display: none;
-    }
-}
-
-.hide-menu {
-    display: none;
 }

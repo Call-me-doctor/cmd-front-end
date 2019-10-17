@@ -9,20 +9,19 @@ class MenuList extends React.Component {
         };
     }
     
-    hideMenu = ()=>{
+    minimizeMenu = ()=>{
         this.setState({
             showMenu: false,
         })
     }
     render(){
         return (
-            <div className={`menu-list-container${this.state.showMenu?'':
-                    '-minimize'
+            <div className={`menu-list-container${this.state.showMenu?'':' minimize'
                 }`}>
                 <div className="menu-list">
                     Menu List
                 </div>
-                <div className="toggle" onClick={this.hideMenu}>
+                <div className="toggle" onClick={this.minimizeMenu}>
                     
                 </div>
             </div>

@@ -34,24 +34,28 @@
   position: fixed;
   height: 100%;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  z-index: 2;
+  transition: width ease-out 0.2s;
+  -webkit-transition: width ease-out 0.2s; }
   .menu-list-container .menu-list {
+    display: block;
     background-color: white;
     width: 250px;
-    border-right: 1px solid #4b4b4b2d; }
+    border-right: 1px solid #4b4b4b2d;
+    transition: display ease-out 0.25s;
+    -webkit-transition: display ease-out 0.25s; }
   .menu-list-container .toggle {
     width: calc(100% - 250px);
     background-color: #4b4b4b2d; }
 
-.menu-list-container-minimize {
-  width: 0; }
-  .menu-list-container-minimize .menu-list {
-    display: none; }
-  .menu-list-container-minimize .toggle {
-    display: none; }
-
 .hide-menu {
   display: none; }
+
+.minimize {
+  width: 0px; }
+  .minimize .menu-list {
+    display: none; }
 
 body {
   margin: 0px;
