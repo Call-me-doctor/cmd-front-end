@@ -14,7 +14,36 @@
         transition: display ease-out 0.25s;
         -webkit-transition: display ease-out 0.25s;
 
-        div {
+        .menu-list-header {
+            display: flex;
+            justify-content: start;
+            padding: 2px 10px;
+            align-items: center;
+            height: $nav-bar-height;
+            color: $bg-color;
+            border-bottom: 0.5px solid $bg-color-fade;
+
+            .menu-close {
+                display: flex;
+                padding: 5px;
+                cursor: pointer;
+                border: 1px solid $bg-color;
+                box-shadow: 0 0 5px 1px $bg-color;
+                border-radius: 10px;
+            }
+            .menu-close:hover {
+                background-color: $bg-color-fade;
+                border-radius: 50%;
+            }
+    
+            .logo{
+                img {
+                    height: $nav-bar-height;
+                }
+            }
+        }
+
+        div.link {
             height: 50px;
             font-size: 25px;
             font-weight: 700;
