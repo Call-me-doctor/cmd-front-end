@@ -8,8 +8,21 @@
 
     input {
         border-radius: 5px;
-        height: 20px;
+        height: 40px;
         border-style: ridge;
         min-width: 200px;
+    }
+}
+
+.button-style-1 {
+    input {
+        border-radius: 5px;
+        height: 40px;
+        min-width: 100px;
+        border: 1px solid $bg-color;
+        background-color: $text-color;
+        color: $bg-color;
+        font-size: 22px;
+        font-weight: 600;
     }
 }

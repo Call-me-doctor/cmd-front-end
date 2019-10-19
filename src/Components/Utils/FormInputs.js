@@ -17,3 +17,11 @@ export const InputPassword1 = (props) => {
         </div>
     );
 }
+
+export const InputSubmit1 = (props) => {
+    return (
+        <div className="button-style-1">
+            <input type="submit" value={props.label}/>
+        </div>
+    );
+}
