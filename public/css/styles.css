@@ -35,12 +35,31 @@
     background-color: #fffb002d;
     border-radius: 50%; }
 
-  .navbar .login form {
+  .navbar .menu-items {
     display: none; } }
 @media (min-width: 769px) {
   .logo-menu .menu {
     display: none; }
 
+  .navbar .menu-items {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    min-width: 300px;
+    justify-content: start;
+    font-size: 20px;
+    font-weight: 500; }
+    .navbar .menu-items div.link {
+      border-right: 1px solid white;
+      text-align: center;
+      padding: 0 5px; }
+      .navbar .menu-items div.link a {
+        color: #FFFC00;
+        text-decoration: none; } }
+@media (max-width: 899px) {
+  .navbar .login form {
+    display: none; } }
+@media (min-width: 900px) {
   .navbar .login .mobile-login {
     display: none; } }
 @media (max-width: 768px) {
