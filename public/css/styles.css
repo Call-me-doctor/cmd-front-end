@@ -124,26 +124,26 @@
     display: none; }
     .menu-list-container .menu-list {
       display: none; } }
-.content-container .login {
+.content-container .details-form {
   background-color: #4b4b4b;
   margin: 100px auto;
   padding: 10px;
   border-radius: 10px; }
-  .content-container .login form {
+  .content-container .details-form form {
     display: flex;
     flex-direction: column;
-    min-height: 200px;
     justify-content: space-between; }
-  .content-container .login label {
+  .content-container .details-form label {
     font-size: 12px;
     color: #FFFC00; }
-    .content-container .login label a {
+    .content-container .details-form label a {
       text-decoration: none;
       color: #6b94ff; }
 
 .input-style-1 {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 10px; }
   .input-style-1 label {
     color: #FFFC00; }
   .input-style-1 input {

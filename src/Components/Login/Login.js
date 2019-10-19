@@ -12,7 +12,7 @@ class Login extends React.Component {
             <Fragment>
                 <NavBar />
                 <div className="content-container">
-                    <div className="login">
+                    <div className="details-form">
                         <form>
                             <InputText1 label="Username or Email" />
                             <InputPassword1 label="Password" />
