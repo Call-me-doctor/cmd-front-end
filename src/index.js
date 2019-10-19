@@ -6,13 +6,13 @@ import {
   Switch
 } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
-import App from './Components/App/App';
+import * as components from './component-imports';
 
 const routing = (
     <Router>
       <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="*" component={App} />
+        <Route exact path="/" component={components.App} />
+        <Route path="*" component={components.App} />
       </Switch>
     </Router>
   )

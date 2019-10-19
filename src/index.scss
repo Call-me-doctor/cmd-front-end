@@ -12,3 +12,20 @@ body {
 p {
   font-size: 25px;
 }
+
+button {
+  padding: 10px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 5px 1px $text-color;
+  border-radius: 10px;
+  a {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+button:hover {
+  border:  1px solid $text-color-fade;
+}

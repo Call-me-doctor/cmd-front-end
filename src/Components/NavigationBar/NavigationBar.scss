@@ -1,0 +1,107 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    min-height: $nav-bar-height;
+    background-color: $bg-color;
+    justify-content: space-between;
+    .logo-menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        align-items: center;
+        color: $text-color;
+
+        .logo{
+            padding-left: 10px;
+            img {
+                height: $nav-bar-height;
+            }
+        }
+    }
+
+    .login {
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+
+        form {
+            display: flex;
+            min-width: 450px;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-menu {
+        .menu {
+            display: flex;
+            padding: 5px;
+            cursor: pointer;
+            border: 1px solid $text-color;
+            box-shadow: 0 0 5px 1px $text-color;
+            border-radius: 10px;
+        }
+        .menu:hover {
+            background-color: $text-color-fade;
+            border-radius: 50%;
+        }
+    }
+
+    .navbar{
+        .menu-items {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .logo-menu {
+        .menu {
+            display: none;
+        }
+    }
+
+    .navbar{
+        .menu-items {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            min-width: 300px;
+            justify-content: start;
+            font-size: 20px;
+            font-weight: 500;
+
+            div.link {
+                border-right: 1px solid white;
+                text-align: center;
+                padding: 0 5px;
+
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 899px){
+    .navbar{
+        .login{
+            form{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 900px){
+   .navbar{ 
+        .login{
+            .mobile-login {
+                display: none;
+            }
+        }
+    }
+}

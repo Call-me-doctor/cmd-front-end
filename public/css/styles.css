@@ -1,22 +1,127 @@
-.App {
-  text-align: center; }
-
-.App-logo {
-  height: 40vmin; }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white; }
+  width: 100%;
+  min-height: 60px;
+  background-color: #4b4b4b;
+  justify-content: space-between; }
+  .navbar .logo-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    align-items: center;
+    color: #FFFC00; }
+    .navbar .logo-menu .logo {
+      padding-left: 10px; }
+      .navbar .logo-menu .logo img {
+        height: 60px; }
+  .navbar .login {
+    display: flex;
+    padding: 0 10px;
+    align-items: center; }
+    .navbar .login form {
+      display: flex;
+      min-width: 450px;
+      justify-content: space-evenly; }
 
-.App-link {
-  color: #09d3ac; }
+@media (max-width: 768px) {
+  .logo-menu .menu {
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #FFFC00;
+    box-shadow: 0 0 5px 1px #FFFC00;
+    border-radius: 10px; }
+  .logo-menu .menu:hover {
+    background-color: #fffb002d;
+    border-radius: 50%; }
 
+  .navbar .menu-items {
+    display: none; } }
+@media (min-width: 769px) {
+  .logo-menu .menu {
+    display: none; }
+
+  .navbar .menu-items {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    min-width: 300px;
+    justify-content: start;
+    font-size: 20px;
+    font-weight: 500; }
+    .navbar .menu-items div.link {
+      border-right: 1px solid white;
+      text-align: center;
+      padding: 0 5px; }
+      .navbar .menu-items div.link a {
+        color: #FFFC00;
+        text-decoration: none; } }
+@media (max-width: 899px) {
+  .navbar .login form {
+    display: none; } }
+@media (min-width: 900px) {
+  .navbar .login .mobile-login {
+    display: none; } }
+@media (max-width: 768px) {
+  .menu-list-container {
+    position: fixed;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    transition: width ease-out 0.2s;
+    -webkit-transition: width ease-out 0.2s; }
+    .menu-list-container .menu-list {
+      display: block;
+      background-color: white;
+      width: 300px;
+      border-right: 1px solid #4b4b4b2d;
+      transition: display ease-out 0.25s;
+      -webkit-transition: display ease-out 0.25s; }
+      .menu-list-container .menu-list .menu-list-header {
+        display: flex;
+        justify-content: start;
+        padding: 2px 10px;
+        align-items: center;
+        height: 60px;
+        color: #4b4b4b;
+        border-bottom: 0.5px solid #4b4b4b2d; }
+        .menu-list-container .menu-list .menu-list-header .menu-close {
+          display: flex;
+          padding: 5px;
+          cursor: pointer;
+          border: 1px solid #4b4b4b;
+          box-shadow: 0 0 5px 1px #4b4b4b;
+          border-radius: 10px; }
+        .menu-list-container .menu-list .menu-list-header .menu-close:hover {
+          background-color: #4b4b4b2d;
+          border-radius: 50%; }
+        .menu-list-container .menu-list .menu-list-header .logo img {
+          height: 60px; }
+      .menu-list-container .menu-list div.link {
+        height: 50px;
+        font-size: 25px;
+        font-weight: 700;
+        border-bottom: 0.5px solid #4b4b4b2d;
+        padding-left: 10px;
+        display: flex;
+        align-items: center; }
+        .menu-list-container .menu-list div.link a {
+          text-decoration: none;
+          color: black; }
+    .menu-list-container .toggle {
+      width: calc(100% - 300px);
+      background-color: #4b4b4b2d; } }
+.minimize {
+  width: 0px; }
+  .minimize .menu-list {
+    display: none; }
+
+@media (min-width: 769px) {
+  .menu-list-container {
+    display: none; }
+    .menu-list-container .menu-list {
+      display: none; } }
 body {
   margin: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -25,5 +130,19 @@ body {
 
 p {
   font-size: 25px; }
+
+button {
+  padding: 10px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 5px 1px #FFFC00;
+  border-radius: 10px; }
+  button a {
+    text-decoration: none;
+    color: #FFFC00; }
+
+button:hover {
+  border: 1px solid #fffb002d; }
 
 /*# sourceMappingURL=styles.css.map */

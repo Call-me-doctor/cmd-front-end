@@ -10,3 +10,8 @@ code.
 
 Import all your ".scss" files into style-imports.scss file, make sure you use 
 scss syntax not css.
+
+import all your components defined in the Routes in the 
+component-imports.js file.
+
+css class name should written in small letters and words seperated by dashes
