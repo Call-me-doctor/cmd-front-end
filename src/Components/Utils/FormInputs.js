@@ -1,10 +1,19 @@
 import React from 'react';
 
-export const InputText1 = (label) => {
+export const InputText1 = (props) => {
     return (
-        <div className="input-text-1">
-            <label>{label}</label>
+        <div className="input-style-1">
+            <label>{props.label}</label>
             <input type="text" />
+        </div>
+    );
+}
+
+export const InputPassword1 = (props) => {
+    return (
+        <div className="input-style-1">
+            <label>{props.label}</label>
+            <input type="password" />
         </div>
     );
 }

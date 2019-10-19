@@ -1,3 +1,15 @@
-.input-text-1 {
-    
+.input-style-1 {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        color: $text-color;
+    }
+
+    input {
+        border-radius: 5px;
+        height: 20px;
+        border-style: ridge;
+        min-width: 200px;
+    }
 }
