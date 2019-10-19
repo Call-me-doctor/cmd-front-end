@@ -1,3 +1,15 @@
-.login {
-    display: flex;
+.content-container{
+    .login {
+        background-color: $bg-color;
+        margin: 100px auto;
+        padding: 10px;
+        border-radius: 10px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+            justify-content: space-between;
+        }
+    }
 }
