@@ -18,6 +18,7 @@ class Login extends React.Component {
                             <InputPassword1 label="Password" />
                             <InputSubmit1 label="Login" />
                         </form>
+                        <label>Don't have an account? <a href="register">Register here</a></label>
                     </div>
                 </div>
             </Fragment>
