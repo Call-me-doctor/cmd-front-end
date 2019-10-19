@@ -49,7 +49,9 @@ class NavigationBar extends React.Component {
                         <input type="password" placeholder="password" />
                         <button> Login </button>
                     </form>
-                    <button className="mobile-login"> Login </button>
+                    <button className="mobile-login">
+                        <a href="login"> Login </a>
+                    </button>
                 </div>
             </div>
         );

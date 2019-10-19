@@ -132,13 +132,15 @@ p {
   font-size: 25px; }
 
 button {
-  color: #FFFC00;
   padding: 10px;
   background-color: inherit;
   border: none;
   cursor: pointer;
   box-shadow: 0 0 5px 1px #FFFC00;
   border-radius: 10px; }
+  button a {
+    text-decoration: none;
+    color: #FFFC00; }
 
 button:hover {
   border: 1px solid #fffb002d; }
