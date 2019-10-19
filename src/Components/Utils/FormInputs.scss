@@ -28,3 +28,20 @@
         font-weight: 600;
     }
 }
+
+.select-type-1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+        color: $text-color;
+    }
+    select {
+        border-radius: 5px;
+        height: 40px;
+        border-style: ridge;
+        min-width: 200px;
+        font-size: 18px;
+    }
+}
