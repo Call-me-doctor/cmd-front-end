@@ -8,9 +8,11 @@ class About extends React.Component {
         return (
             <Fragment>
                 <NavBar />
-                <div className="info">
-                    <h1>About</h1>
-                    <p> {LOREM}</p>
+                <div className="content-container">
+                    <div className="info">
+                        <h1>About</h1>
+                        <p> {LOREM}</p>
+                    </div>
                 </div>
             </Fragment>
         );
