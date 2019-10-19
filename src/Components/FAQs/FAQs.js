@@ -3,14 +3,14 @@ import NavBar from '../NavigationBar/NavigationBar';
 
 import {LOREM} from '../../constants';
 
-class About extends React.Component {
+class FAQs extends React.Component {
     render(){
         return (
             <Fragment>
                 <NavBar />
                 <div className="content-container">
                     <div className="info">
-                        <h1>About</h1>
+                        <h1>FAQs</h1>
                         <p> {LOREM}</p>
                     </div>
                 </div>
@@ -19,4 +19,4 @@ class About extends React.Component {
     }
 }
 
-export default About;
+export default FAQs;
