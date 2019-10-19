@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  font-size: 25px;
+  font-size: 18px;
 }
 
 button {
@@ -28,4 +28,12 @@ button {
 
 button:hover {
   border:  1px solid $text-color-fade;
+}
+
+.content-container {
+  padding: 0 10px;
+  max-width: 1024px;
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
 }

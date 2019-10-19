@@ -22,6 +22,8 @@
       display: flex;
       min-width: 450px;
       justify-content: space-evenly; }
+      .navbar .login form button {
+        color: #FFFC00; }
 
 @media (max-width: 768px) {
   .logo-menu .menu {
@@ -129,7 +131,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 p {
-  font-size: 25px; }
+  font-size: 18px; }
 
 button {
   padding: 10px;
@@ -144,5 +146,12 @@ button {
 
 button:hover {
   border: 1px solid #fffb002d; }
+
+.content-container {
+  padding: 0 10px;
+  max-width: 1024px;
+  display: flex;
+  margin: auto;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

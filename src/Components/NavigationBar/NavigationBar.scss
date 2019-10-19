@@ -28,6 +28,10 @@
             display: flex;
             min-width: 450px;
             justify-content: space-evenly;
+
+            button {
+                color: $text-color;
+            }
         }
     }
 }
