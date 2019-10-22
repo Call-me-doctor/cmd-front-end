@@ -4,7 +4,7 @@ export const InputText1 = (props) => {
     return (
         <div className="input-style-1">
             <label>{props.label}</label>
-            <input type="text" form={props.formId}/>
+            <input name={props.label} type="text" form={props.formId}/>
         </div>
     );
 }
@@ -13,7 +13,7 @@ export const InputPassword1 = (props) => {
     return (
         <div className="input-style-1">
             <label>{props.label}</label>
-            <input type="password" form={props.formId} />
+            <input name={props.label} type="password" form={props.formId} />
         </div>
     );
 }
@@ -21,7 +21,7 @@ export const InputPassword1 = (props) => {
 export const InputSubmit1 = (props) => {
     return (
         <div className="button-style-1">
-            <input type="submit" value={props.label} form={props.formId}/>
+            <input name={props.label} type="submit" value={props.label} form={props.formId}/>
         </div>
     );
 }
