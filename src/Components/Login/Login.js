@@ -6,6 +6,8 @@ import {
     InputSubmit1,
 } from '../Utils/FormInputs';
 
+const mobileLoginForm = "login-mobile";
+
 class Login extends React.Component {
     render() { 
         return (
@@ -13,10 +15,10 @@ class Login extends React.Component {
                 <NavBar />
                 <div className="content-container">
                     <div className="details-form">
-                        <form>
-                            <InputText1 label="Username or Email" />
-                            <InputPassword1 label="Password" />
-                            <InputSubmit1 label="Login" />
+                        <form id={mobileLoginForm}>
+                            <InputText1 label="Username or Email" formId={mobileLoginForm} />
+                            <InputPassword1 label="Password" formId={mobileLoginForm}/>
+                            <InputSubmit1 label="Login" formId={mobileLoginForm}/>
                         </form>
                         <label>Don't have an account? <a href="register">Register here</a></label>
                     </div>
