@@ -31,9 +31,9 @@ export const Select1 = (props) => {
         <div className="select-type-1">
             <label>{props.label}</label>
             <select name={props.label} form={props.formId}>
-                <option value="default">Select {props.label}</option>
-                {props.options.map((v) => 
-                    <option value={v.key}>{v.value}</option>
+                <option key={-1} value="default">Select {props.label}</option>
+                {props.options.map((v,i) => 
+                    <option key={i} value={v.key}>{v.value}</option>
                 )}
             </select>
         </div>
