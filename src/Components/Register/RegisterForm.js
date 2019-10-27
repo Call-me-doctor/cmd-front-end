@@ -20,9 +20,59 @@ const clientType = [
 const registerFormId = "register-form";
 
 class RegisterForm extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            errors: [
+                {errors: []},
+                {errors: []},
+                {errors: []},
+                {errors: []},
+                {errors: []},
+                {errors: []},
+                {errors: []},
+                {errors: []},
+            ]
+        }
+    }
 
     handleSubmit = (event) => {
-        console.log(event)
+        event.preventDefault();
+        const targets = event.target;
+        let err = []
+        
+        let name = targets[0]
+        if(!name.value){
+            err[0] = {errors: ["Please fill in this field"]}
+        }
+        let surname = targets[1]
+        if(!surname.value){
+            err[1] = {errors: ["Please fill in this field"]}
+        }
+        let salutation = targets[2]
+        if(salutation.value === "default"){
+            err[2] = {errors: ["Please fill in this field"]}
+        }
+        let email = targets[3]
+        if(!email.value){
+            err[3] = {errors: ["Please fill in this field"]}
+        }
+        let username = targets[4]
+        if(!username.value){
+            err[4] = {errors: ["Please fill in this field"]}
+        }
+        let password = targets[5]
+        if(!password.value){
+            err[5] = {errors: ["Please fill in this field"]}
+        }
+        let repeatpassword = targets[6]
+        if(!repeatpassword.value){
+            err[6] = {errors: ["Please fill in this field"]}
+        }
+        let clienttype = targets[7]
+        if(!clienttype.value){
+            err[7] = {errors: ["Please fill in this field"]}
+        }
     }
     render() { 
         return (
