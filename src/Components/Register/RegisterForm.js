@@ -23,16 +23,16 @@ class RegisterForm extends React.Component {
     constructor(){
         super();
         this.state = {
-            errors: [
-                {errors: []},
-                {errors: []},
-                {errors: []},
-                {errors: []},
-                {errors: []},
-                {errors: []},
-                {errors: []},
-                {errors: []},
-            ]
+            errors: {
+                name: [],
+                surname: [],
+                salutation: [],
+                email: [],
+                username: [],
+                password: [],
+                repeatPassword: [],
+                clientType: [],
+            }
         }
     }
 
@@ -77,14 +77,14 @@ class RegisterForm extends React.Component {
     render() { 
         return (
             <form id={registerFormId} onSubmit={this.handleSubmit} method="post">
-                <InputText1 label="Name" formId={registerFormId}/>
-                <InputText1 label="Surname" formId={registerFormId}/>
-                <Select1 label="Salutation" options={salutation} formId={registerFormId}/>
-                <InputText1 label="E-mail" formId={registerFormId}/>
-                <InputText1 label="Username" formId={registerFormId}/>
-                <InputPassword1 label="Password" formId={registerFormId}/>
-                <InputPassword1 label="Repeat Password" formId={registerFormId}/>
-                <Select1 label="Client Type" options={clientType} formId={registerFormId}/>
+                <InputText1 label="Name" formId={registerFormId} errors={this.state.errors.name}/>
+                <InputText1 label="Surname" formId={registerFormId} errors={this.state.errors.surname}/>
+                <Select1 label="Salutation" options={salutation} formId={registerFormId} errors={this.state.errors.salutation}/>
+                <InputText1 label="E-mail" formId={registerFormId} errors={this.state.errors.email}/>
+                <InputText1 label="Username" formId={registerFormId} errors={this.state.errors.username}/>
+                <InputPassword1 label="Password" formId={registerFormId} errors={this.state.errors.password}/>
+                <InputPassword1 label="Repeat Password" formId={registerFormId} errors={this.state.errors.repeatPassword}/>
+                <Select1 label="Client Type" options={clientType} formId={registerFormId} errors={this.state.errors.clientType}/>
                 <InputSubmit1 label="Register" formId={registerFormId}/>
             </form>
         );

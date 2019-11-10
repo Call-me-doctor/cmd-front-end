@@ -45,3 +45,18 @@
         font-size: 18px;
     }
 }
+
+.error {
+    ul {
+        margin: 5px 0px;
+        background-color: pink;
+    }
+
+    li {
+        color:darkred;
+    }
+
+    input, select {
+        border-color: red;
+    }
+}
