@@ -39,40 +39,54 @@ class RegisterForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const targets = event.target;
-        let err = []
+        let _errors = {}
         
-        let name = targets[0]
+        let name = targets[0];
         if(!name.value){
-            err[0] = {errors: ["Please fill in this field"]}
+            _errors.name = ["Please fill in this field"];
         }
-        let surname = targets[1]
+        let surname = targets[1];
         if(!surname.value){
-            err[1] = {errors: ["Please fill in this field"]}
+            _errors.surname = ["Please fill in this field"];
         }
-        let salutation = targets[2]
+        let salutation = targets[2];
         if(salutation.value === "default"){
-            err[2] = {errors: ["Please fill in this field"]}
+            _errors.salutation = ["Please select an option"];
         }
-        let email = targets[3]
+
+        let email = targets[3];
         if(!email.value){
-            err[3] = {errors: ["Please fill in this field"]}
+            _errors.email = ["Please fill in this field"];
+        } else {
+            let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ ;
+            if(!re.test(email.value)){
+                _errors.email = ["email should be in this format 'example@domain.xxx'"];
+            }
         }
-        let username = targets[4]
-        if(!username.value){
-            err[4] = {errors: ["Please fill in this field"]}
-        }
-        let password = targets[5]
+        let password = targets[4];
         if(!password.value){
-            err[5] = {errors: ["Please fill in this field"]}
+            _errors.password = ["Please fill in this field"];
+        } else {
+            if(password.value.length < 8){
+                _errors.password = ["Password must be 8 characters or longer"];
+            }
         }
-        let repeatpassword = targets[6]
+        let repeatpassword = targets[5];
         if(!repeatpassword.value){
-            err[6] = {errors: ["Please fill in this field"]}
+            _errors.repeatPassword = ["Please fill in this field"];
+        } else {
+            if(repeatpassword.value !== password.value){
+                _errors.repeatPassword = ["It must match the password"];
+            }
         }
-        let clienttype = targets[7]
-        if(!clienttype.value){
-            err[7] = {errors: ["Please fill in this field"]}
+        let clienttype = targets[6];
+        if(clienttype.value === "default"){
+            _errors.clientType = ["Please select an option"];
         }
+
+        this.setState({
+            errors: _errors
+        })
     }
     render() { 
         return (
@@ -81,7 +95,6 @@ class RegisterForm extends React.Component {
                 <InputText1 label="Surname" formId={registerFormId} errors={this.state.errors.surname}/>
                 <Select1 label="Salutation" options={salutation} formId={registerFormId} errors={this.state.errors.salutation}/>
                 <InputText1 label="E-mail" formId={registerFormId} errors={this.state.errors.email}/>
-                <InputText1 label="Username" formId={registerFormId} errors={this.state.errors.username}/>
                 <InputPassword1 label="Password" formId={registerFormId} errors={this.state.errors.password}/>
                 <InputPassword1 label="Repeat Password" formId={registerFormId} errors={this.state.errors.repeatPassword}/>
                 <Select1 label="Client Type" options={clientType} formId={registerFormId} errors={this.state.errors.clientType}/>
