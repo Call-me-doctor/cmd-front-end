@@ -17,6 +17,7 @@ const routing = (
         <Route exact path="/terms_and_conditions" component={components.TermsAndConditions} />
         <Route exact path="/login" component={components.Login} />
         <Route exact path="/register" component={components.Register} />
+        <Route exact path="/register/:user_type" render={(props) => <components.Register {...props} />} />
         <Route path="*" component={components.App} />
       </Switch>
     </Router>

@@ -163,18 +163,26 @@
   font-size: 22px;
   font-weight: 600; }
 
-.select-type-1 {
+.select-style-1 {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px; }
-  .select-type-1 label {
+  .select-style-1 label {
     color: #FFFC00; }
-  .select-type-1 select {
+  .select-style-1 select {
     border-radius: 5px;
     height: 40px;
     border-style: ridge;
     min-width: 200px;
     font-size: 18px; }
+
+.error ul {
+  margin: 5px 0px;
+  background-color: pink; }
+.error li {
+  color: darkred; }
+.error input, .error select {
+  border-color: red; }
 
 body {
   margin: 0px;
