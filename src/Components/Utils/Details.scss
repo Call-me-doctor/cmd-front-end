@@ -4,6 +4,9 @@
         margin: 0 auto;
         padding: 10px;
         border-radius: 10px;
+        min-width: 300px;
+        width: 80%;
+        max-width: 500px;
 
         form {
             display: flex;
