@@ -35,7 +35,7 @@ class NavigationBar extends React.Component {
                         <MenuIcon />
                     </div>
                     <div className="logo">
-                        <img src="images/logo_trans.png" alt="logo"/>
+                        <a href="/"><img src="images/logo_trans.png" alt="logo"/></a>
                     </div>
                     <div className="menu-items">
                         {this.menuItem(MENU_LIST.about, 'about')}

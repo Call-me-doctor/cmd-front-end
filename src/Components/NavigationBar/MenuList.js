@@ -22,7 +22,7 @@ class MenuList extends React.Component {
                             <CloseIcon />
                         </div>
                         <div className="logo">
-                            <img src="images/logo_badge.png" alt="logo"/>
+                            <a href="/"><img src="images/logo_badge.png" alt="logo"/></a>
                         </div>
                     </div>
                     {this.menuItem(MENU_LIST.register, 'register')}
