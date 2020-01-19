@@ -12,8 +12,8 @@ function App() {
           <h5>Which one are you?</h5>
         </div>
         <div className="home-register-buttons">
-          <HomeButton text="Patient"/>
-          <HomeButton text="Medical Doctor"/>
+          <HomeButton text="Patient" path="register/0"/>
+          <HomeButton text="Medical Doctor" path="register/1"/>
         </div>
       </div>
     </>
