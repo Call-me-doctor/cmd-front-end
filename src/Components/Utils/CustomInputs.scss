@@ -1,0 +1,14 @@
+.home-button-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 50px;
+    width: 80%;
+    margin: 10px auto;
+    color: $text-color;
+    background-color: $bg-color;
+    font-size: 25px;
+    box-shadow: none;
+    cursor: pointer;
+}
