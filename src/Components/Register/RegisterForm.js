@@ -20,8 +20,8 @@ const clientType = [
 const registerFormId = "register-form";
 
 class RegisterForm extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             errors: {
                 name: [],
@@ -97,7 +97,7 @@ class RegisterForm extends React.Component {
                 <InputText1 label="E-mail" formId={registerFormId} errors={this.state.errors.email}/>
                 <InputPassword1 label="Password" formId={registerFormId} errors={this.state.errors.password}/>
                 <InputPassword1 label="Repeat Password" formId={registerFormId} errors={this.state.errors.repeatPassword}/>
-                <Select1 label="Client Type" options={clientType} formId={registerFormId} errors={this.state.errors.clientType}/>
+                <Select1 label="Client Type" options={clientType} formId={registerFormId} errors={this.state.errors.clientType} selected={this.props.selected}/>
                 <InputSubmit1 label="Register" formId={registerFormId}/>
             </form>
         );

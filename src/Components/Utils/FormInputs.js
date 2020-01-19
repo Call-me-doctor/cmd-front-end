@@ -44,10 +44,11 @@ export const InputSubmit1 = (props) => {
 
 export const Select1 = (props) => {
     const errors = props.errors;
+    const chosenOptions = props.options.find(opt => props.selected === opt.key);
     return (
         <div className={`select-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
             <label>{props.label}</label>
-            <select name={props.label} form={props.formId}>
+            <select name={props.label} form={props.formId} defaultValue={`${chosenOptions?chosenOptions.key:-1}`}>
                 <option key={-1} value="default">Select {props.label}</option>
                 {props.options.map((v,i) => 
                     <option key={i} value={v.key}>{v.value}</option>
