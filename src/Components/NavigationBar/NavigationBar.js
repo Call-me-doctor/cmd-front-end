@@ -28,32 +28,35 @@ class NavigationBar extends React.Component {
 
     render(){
         return (
-            <div className="navbar">
-                <MenuList showMenu={this.state.showMenu} toggle={this.toggleMenu}/>
-                <div className="logo-menu">
-                    <div className="menu" onClick={this.toggleMenu}>
-                        <MenuIcon />
+            <>
+                <div className="navbar fix-navbar">
+                    <MenuList showMenu={this.state.showMenu} toggle={this.toggleMenu}/>
+                    <div className="logo-menu">
+                        <div className="menu" onClick={this.toggleMenu}>
+                            <MenuIcon />
+                        </div>
+                        <div className="logo">
+                            <a href="/"><img src={process.env.PUBLIC_URL + "/images/logo_trans.png"} alt="logo"/></a>
+                        </div>
+                        <div className="menu-items">
+                            {this.menuItem(MENU_LIST.about, 'about')}
+                            {this.menuItem(MENU_LIST.faqs, 'faqs')}
+                            {this.menuItem(MENU_LIST.terms_and_conditions, 'terms_and_conditions')}
+                        </div>
                     </div>
-                    <div className="logo">
-                        <a href="/"><img src={process.env.PUBLIC_URL + "/images/logo_trans.png"} alt="logo"/></a>
-                    </div>
-                    <div className="menu-items">
-                        {this.menuItem(MENU_LIST.about, 'about')}
-                        {this.menuItem(MENU_LIST.faqs, 'faqs')}
-                        {this.menuItem(MENU_LIST.terms_and_conditions, 'terms_and_conditions')}
+                    <div className="login">
+                        <form>
+                            <input type="text" placeholder="email or username"/>
+                            <input type="password" placeholder="password" />
+                            <button> Login </button>
+                        </form>
+                        <button className="mobile-login">
+                            <a href="login"> Login </a>
+                        </button>
                     </div>
                 </div>
-                <div className="login">
-                    <form>
-                        <input type="text" placeholder="email or username"/>
-                        <input type="password" placeholder="password" />
-                        <button> Login </button>
-                    </form>
-                    <button className="mobile-login">
-                        <a href="login"> Login </a>
-                    </button>
-                </div>
-            </div>
+                <div className="navbar"/>
+            </>
         );
     }
 }
