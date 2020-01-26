@@ -84,9 +84,17 @@ class RegisterForm extends React.Component {
             _errors.clientType = ["Please select an option"];
         }
 
-        this.setState({
-            errors: _errors
-        })
+        if(Object.keys(_errors).length > 0){
+            this.setState({
+                errors: _errors
+            })
+        } else {
+            /* TODO
+                post to a register API
+                on success redirect to registration success
+            */
+           window.location.href = '/register/complete'
+        }
     }
     render() { 
         return (
