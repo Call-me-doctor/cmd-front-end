@@ -5,3 +5,4 @@ export {default as TermsAndConditions} from './Components/TermsAndConditions/Ter
 export {default as Login} from './Components/Login/Login';
 export {default as Register} from './Components/Register/Register';
 export {default as RegistrationDone} from './Components/Register/RegistrationDone';
+export {default as PatientCompleteProfile} from './Components/PatientComponents/CompleteProfile/CompleteProfile';
