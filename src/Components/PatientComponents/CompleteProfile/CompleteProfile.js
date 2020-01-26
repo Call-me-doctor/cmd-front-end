@@ -1,8 +1,11 @@
 import React, {Fragment} from 'react';
 import NavBar from '../../NavigationBar/NavigationBar';
 import {InputControl1} from '../../Utils/FormInputs';
+import ContactDetails from './ContactDetails';
 
 const numForm = 4;
+
+const formIDs = ['ContactDetails'];
 
 class CompleteProfile extends React.Component {
     constructor(props) {
@@ -17,7 +20,7 @@ class CompleteProfile extends React.Component {
     formLoader = (formID) => {
         switch (formID) {
             case 0:
-                return <div>Form 1</div>
+                return <ContactDetails callBack={()=>{this.formControlCallback(1)}} formId={formIDs[formID]}/>
             case 1:
                 return <div>Form 2</div>
             case 2:
@@ -61,18 +64,18 @@ class CompleteProfile extends React.Component {
         */
     }
 
-    render() { 
+    render() {
         return (
             <Fragment>
                 <NavBar hideLogin={true}/>
                 <div className="user-content-container">
-                    <label>Complete Your Profile</label>
+                    <label className="header">Complete Your Profile</label>
                     <div className="content-container">
                         <div className="details-form">
                             {this.formLoader(this.state.formID)}
                             <div className="inline-buttons">
                                 {this.state.submitForm?<InputControl1 label="Submit" callBack={this.submitForm}/>:
-                                <InputControl1 label="Next" callBack={()=>{this.formControlCallback(1)}}/>}
+                                <InputControl1 formId={formIDs[0]} label="Next" />}
                                 {this.state.showPrev?<InputControl1 label="Back" callBack={()=>{this.formControlCallback(-1)}}/>:null}
                             </div>
                         </div>
