@@ -6,7 +6,7 @@
         border-radius: 10px;
         min-width: 300px;
         width: 80%;
-        max-width: 500px;
+        max-width: 400px;
 
         form {
             display: flex;
@@ -23,6 +23,18 @@
                 text-decoration: none;
                 color: $link-text-color;
             }
+        }
+    }
+
+    .form-top-margin {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 901px){
+    .content-container{
+        .form-top-margin {
+            margin-top: 200px;
         }
     }
 }

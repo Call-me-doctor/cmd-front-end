@@ -5,8 +5,8 @@ import MenuList from './MenuList';
 import {MENU_LIST} from '../../constants';
 
 class NavigationBar extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             showMenu: false,
         }
@@ -44,16 +44,18 @@ class NavigationBar extends React.Component {
                             {this.menuItem(MENU_LIST.terms_and_conditions, 'terms_and_conditions')}
                         </div>
                     </div>
-                    <div className="login">
-                        <form>
-                            <input type="text" placeholder="email or username"/>
-                            <input type="password" placeholder="password" />
-                            <button> Login </button>
-                        </form>
-                        <button className="mobile-login">
-                            <a href="login"> Login </a>
-                        </button>
-                    </div>
+                    { this.props.hideLogin ? null:
+                        <div className="login">
+                            <form>
+                                <input type="text" placeholder="email or username"/>
+                                <input type="password" placeholder="password" />
+                                <button> Login </button>
+                            </form>
+                            <button className="mobile-login">
+                                <a href="login"> Login </a>
+                            </button>
+                        </div>
+                    }
                 </div>
                 <div className="navbar"/>
             </>

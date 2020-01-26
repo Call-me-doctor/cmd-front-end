@@ -12,9 +12,9 @@ class Login extends React.Component {
     render() { 
         return (
             <Fragment>
-                <NavBar />
+                <NavBar hideLogin={true} />
                 <div className="content-container">
-                    <div className="details-form">
+                    <div className="details-form form-top-margin">
                         <form id={mobileLoginForm}>
                             <InputText1 label="Username or Email" formId={mobileLoginForm} />
                             <InputPassword1 label="Password" formId={mobileLoginForm}/>

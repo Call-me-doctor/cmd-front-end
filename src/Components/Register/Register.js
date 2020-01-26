@@ -10,7 +10,7 @@ class Register extends React.Component {
                 <div className="content-container">
                     <div className="details-form">
                         <RegisterForm selected={ parseInt(this.props.match.params.user_type)}/>
-                        <label>Already have an account? <a href="login">Login here</a></label>
+                        <label id="form-info">Already have an account? <a href="/login">Login here</a></label>
                     </div>
                 </div>
             </Fragment>
