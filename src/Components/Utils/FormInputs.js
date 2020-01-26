@@ -42,6 +42,16 @@ export const InputSubmit1 = (props) => {
     );
 }
 
+export const InputControl1 = (props) => {
+    const errors = props.errors;
+    return (
+        <div className={`button-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
+            <input name={props.label} type="submit" value={props.label} onClick={props.callBack}/>
+            {errors ? errorList(errors):null}
+        </div>
+    );
+}
+
 export const Select1 = (props) => {
     const errors = props.errors;
     const chosenOptions = props.options.find(opt => props.selected === opt.key);
