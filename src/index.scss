@@ -37,3 +37,8 @@ button:hover {
   margin: auto;
   margin-top: 10px;
 }
+
+a {
+  text-decoration: none;
+  color: $link-text-color;
+}
