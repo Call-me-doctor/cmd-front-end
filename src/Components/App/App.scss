@@ -10,6 +10,19 @@
 .home-text{
     padding: 10px;
     text-align: center;
+
+    label {
+        display: block;
+        margin: 30px 0px;
+    }
+
+    label.f20 {
+        font-size: 20px;
+    }
+    
+    label.f12 {
+        font-size: 12px;
+    }
 }
 
 .home-register-buttons{
