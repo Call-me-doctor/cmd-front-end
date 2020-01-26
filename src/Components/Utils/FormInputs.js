@@ -15,7 +15,7 @@ export const InputText1 = (props) => {
     return (
         <div className={`input-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
             <label>{props.label}</label>
-            <input name={props.label} type="text" form={props.formId}/>
+            <input name={props.label} type="text" form={props.formId} placeholder={props.placeholder}/>
             {errors ? errorList(errors):null}
         </div>
     );
@@ -46,7 +46,7 @@ export const InputControl1 = (props) => {
     const errors = props.errors;
     return (
         <div className={`button-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
-            <input name={props.label} type="submit" value={props.label} onClick={props.callBack}/>
+            <input name={props.label} type="submit" value={props.label} onClick={props.callBack} form={props.formId}/>
             {errors ? errorList(errors):null}
         </div>
     );
