@@ -6,6 +6,13 @@ class RegistrationDone extends React.Component {
         super(props);
         this.state = {  }
     }
+
+    componentDidMount() {
+        setTimeout(() => {
+            window.location.href = '/login';
+        }, 2000);
+    }
+
     render() { 
         return ( 
             <Fragment>
