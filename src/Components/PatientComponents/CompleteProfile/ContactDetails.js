@@ -73,7 +73,13 @@ class ContactDetails extends React.Component {
         }
 
         if(!isError){
-            this.props.callBack();
+            const data = {
+                'cellphone': targets[0].value,
+                'address': targets[1].value + ',' + targets[2].value,
+                'zip': targets[3].value,
+                'emergency': targets[4].value,
+            }
+            this.props.callBack("contactDetails", data);
         }
 
         this.setState({

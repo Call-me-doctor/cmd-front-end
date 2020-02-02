@@ -14,13 +14,14 @@ class CompleteProfile extends React.Component {
             formID: 0,
             showPrev: false,
             submitForm: false,
+            data: {}
          }
     }
 
     formLoader = (formID) => {
         switch (formID) {
             case 0:
-                return <ContactDetails callBack={()=>{this.formControlCallback(1)}} formId={formIDs[formID]}/>
+                return <ContactDetails callBack={(name,data)=>{this.formControlCallback(1, name,data)}} formId={formIDs[formID]}/>
             case 1:
                 return <div>Form 2</div>
             case 2:
@@ -33,7 +34,7 @@ class CompleteProfile extends React.Component {
         }
     }
 
-    formControlCallback = (direction)=>{
+    formControlCallback = (direction, name, data)=>{
         let newFormID = this.state.formID + direction*1;
         let newShowPrev = this.state.showPrev;
         let newSubmitForm = this.state.submitForm;
@@ -55,6 +56,16 @@ class CompleteProfile extends React.Component {
             formID: newFormID,
             showPrev: newShowPrev,
             submitForm: newSubmitForm,
+        })
+
+        this.addData(name,data);
+    }
+
+    addData = (name,data) => {
+        const _data = this.state.data;
+        _data[name] = data;
+        this.setState({
+            data: _data
         })
     }
 
