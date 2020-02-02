@@ -2,9 +2,9 @@ import React from 'react';
 
 const errorList = (errors) => {
     return errors.length <= 0? null: (
-        <div class="error">
+        <div className="error">
             <ul>
-                {errors.map(v => (<li> {v} </li>))}
+                {errors.map((v,i) => (<li key={i}> {v} </li>))}
             </ul>
         </div>
     );
