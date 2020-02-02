@@ -1,5 +1,6 @@
 import React from 'react';
 import {InputText1} from '../../Utils/FormInputs';
+import {IsCellNumber,HowManyCommas} from '../../Utils/MiscFunctions';
 
 class ContactDetails extends React.Component {
     constructor(props) {
@@ -22,7 +23,63 @@ class ContactDetails extends React.Component {
             if no errors run callback
             else show errors
         */
-        this.props.callBack();
+        const targets = event.target;
+        let _errors = {};
+        let isError = false;
+        if(targets[0].value){
+            if(!IsCellNumber(targets[0].value)){
+                _errors.cellphone = ["Please use this format: 27000000000"];
+                isError = true;
+            }
+        } else {
+            isError = true;
+            _errors.cellphone = ["Please fill in cellphone field"];
+        }
+
+        _errors.address = [];
+        if(targets[1].value){
+            if(HowManyCommas(targets[1].value) !== 1){
+                isError = true;
+                _errors.address = ["Please use this format: str. number, str. name"];
+            }
+        } else {
+            isError = true;
+            _errors.address = ["Please fill in street name and number field"];
+        }
+
+        if(targets[2].value){
+            if(HowManyCommas(targets[2].value) !== 1){
+                isError = true;
+                _errors.address.push("Please use this format: str. number, str. name");
+            }
+        } else {
+            isError = true;
+            _errors.address.push("Please fill in suburb and city/town field");
+        }
+
+        if(!targets[3].value){
+            isError = true;
+            _errors.zip = ["Please fill in the zip code field"]
+        }
+
+        if(targets[4].value){
+            if(!IsCellNumber(targets[4].value)){
+                isError = true;
+                _errors.emergency = ["Please use this format: 27000000000"];
+            }
+        } else {
+            isError = true;
+            _errors.emergency = ["Please fill in emergency contact"];
+        }
+
+        if(!isError){
+            this.props.callBack();
+        }
+
+        this.setState({
+            errors:_errors
+        })
+        
     }
     render() { 
         return (
