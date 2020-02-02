@@ -14,14 +14,16 @@ class CompleteProfile extends React.Component {
             formID: 0,
             showPrev: false,
             submitForm: false,
-            data: {}
+            data: {
+                contactDetails:{}
+            }
          }
     }
 
     formLoader = (formID) => {
         switch (formID) {
             case 0:
-                return <ContactDetails callBack={(name,data)=>{this.formControlCallback(1, name,data)}} formId={formIDs[formID]}/>
+                return <ContactDetails data={this.state.data.contactDetails} callBack={(name,data)=>{this.formControlCallback(1, name,data)}} formId={formIDs[formID]}/>
             case 1:
                 return <div>Form 2</div>
             case 2:

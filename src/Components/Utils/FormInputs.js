@@ -15,7 +15,7 @@ export const InputText1 = (props) => {
     return (
         <div className={`input-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
             <label>{props.label}</label>
-            <input name={props.label} type="text" form={props.formId} placeholder={props.placeholder}/>
+            <input name={props.label} defaultValue={props.val} type="text" form={props.formId} placeholder={props.placeholder}/>
             {errors ? errorList(errors):null}
         </div>
     );
