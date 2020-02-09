@@ -3,24 +3,27 @@ import NavBar from '../../NavigationBar/NavigationBar';
 import {InputControl1} from '../../Utils/FormInputs';
 import ContactDetails from './ContactDetails';
 import IdentityDetails from './IdentityDetails';
+import DocumentsUploads from './DocumentsUploads';
 
 const numForm = 4;
 
 const formIDs = [
     'ContactDetails',
     'IdentityDetails',
+    'DocumentsUploads',
 ];
 
 class CompleteProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            formID: 0,
+            formID: 2,
             showPrev: false,
             submitForm: false,
             data: {
                 contactDetails:{},
                 identityDetails:{},
+                documentUploads:{},
             }
          }
     }
@@ -28,11 +31,23 @@ class CompleteProfile extends React.Component {
     formLoader = (formID) => {
         switch (formID) {
             case 0:
-                return <ContactDetails data={this.state.data.contactDetails} callBack={(name,data)=>{this.formControlCallback(1, name,data)}} formId={formIDs[formID]}/>
+                return <ContactDetails 
+                            data={this.state.data.contactDetails} 
+                            callBack={(name,data)=>{this.formControlCallback(1, name,data)}} 
+                            formId={formIDs[formID]}
+                        />
             case 1:
-                return <IdentityDetails data={this.state.data.identityDetails} callBack={(name,data)=>{this.formControlCallback(1, name,data)}} formId={formIDs[formID]}/>
+                return <IdentityDetails 
+                            data={this.state.data.identityDetails} 
+                            callBack={(name,data)=>{this.formControlCallback(1, name,data)}} 
+                            formId={formIDs[formID]}
+                        />
             case 2:
-                return <div>Form 3</div>
+                return <DocumentsUploads
+                            data={this.state.data.documentUploads} 
+                            callBack={(name,data)=>{this.formControlCallback(1, name,data)}} 
+                            formId={formIDs[formID]}
+                        />
             case 3:
                 return <div>Form 4</div>
         
