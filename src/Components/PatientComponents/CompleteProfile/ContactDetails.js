@@ -25,11 +25,6 @@ class ContactDetails extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        /*TODO
-            Validate form
-            if no errors run callback
-            else show errors
-        */
         const targets = event.target;
         let _errors = {};
         let isError = false;
@@ -57,7 +52,7 @@ class ContactDetails extends React.Component {
         if(targets[2].value){
             if(HowManyCommas(targets[2].value) !== 1){
                 isError = true;
-                _errors[keyStrings.address].push("Please use this format: str. number, str. name");
+                _errors[keyStrings.address].push("Please use this format: suburb, city/Town");
             }
         } else {
             isError = true;
