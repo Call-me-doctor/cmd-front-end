@@ -44,17 +44,17 @@ class IdentityDetails extends React.Component {
 
         if(!targets[1].value){
             isError = true;
-            _errors[keyStrings.id].push("Please fill in your identity")
+            _errors[keyStrings.id].push("Please fill in your identity");
         }
 
         if(!targets[2].value){
             isError = true;
-            _errors[keyStrings.nationality].push("Please fill in your nationality")
+            _errors[keyStrings.nationality] = ["Please fill in your nationality"];
         }
 
         if(!targets[3].value){
             isError = true;
-            _errors[keyStrings.nationality].push("Please fill in your medical aid provider")
+            _errors[keyStrings.medicalAid] = ["Please fill in your medical aid provider"];
         }
 
         if(!isError){
@@ -96,12 +96,17 @@ class IdentityDetails extends React.Component {
                 <label className="header f20">Identity Details</label>
                 <Select1 selected={this.processData(0)} options={IDOptions} formId={this.props.formId} label={'Identity Type'} />
                 <InputText1 val={this.processData(1)} formId={this.props.formId} errors={this.state.errors[keyStrings.id]}/>
-                <InputText1 val={this.processData(2)} formId={this.props.formId} label={keyStrings.nationality} errors={this.state.errors.nationality}/>
+                <InputText1 
+                    val={this.processData(2)} 
+                    formId={this.props.formId} 
+                    label={keyStrings.nationality} 
+                    errors={this.state.errors[keyStrings.nationality]}
+                />
                 <InputText1 
                     val={this.processData(3)} 
                     formId={this.props.formId} 
                     label={keyStrings.medicalAid} 
-                    errors={this.state.errors.medicalAid} 
+                    errors={this.state.errors[keyStrings.medicalAid]} 
                     placeholder="Type 'none' if unavailable"
                 />
             </form>
