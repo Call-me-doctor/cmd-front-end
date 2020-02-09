@@ -68,3 +68,31 @@ export const Select1 = (props) => {
         </div>
     );
 }
+
+export const Avatar1 = (props) => {
+    const errors = props.errors;
+
+    return (
+        <div className={`avatar-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
+            <input id={props.id} name={props.label} type="file" form={props.formId}/>
+            <label id="avatar" htmlFor={props.id}>+</label>
+            <label id="label">{props.label}</label>
+            {errors ? errorList(errors):null}
+        </div>
+    );
+}
+
+export const FileUpload1 = (props) => {
+    const errors = props.errors;
+
+    return (
+        <div className={`file-upload-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
+            <label>{props.label}</label>
+            <div className="inline-inputs">
+                <input type="text" name="filename" placeholder={props.placeholder} readOnly />
+                <label id="file" htmlFor={props.id}>+</label>
+                <input id={props.id} name={props.label} type="file" form={props.formId}/>
+            </div>
+        </div>
+    );
+}

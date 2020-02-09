@@ -14,4 +14,4 @@ scss syntax not css.
 import all your components defined in the Routes in the 
 component-imports.js file.
 
-css class name should written in small letters and words seperated by dashes
+css class name should be written in small letters and words seperated by dashes
