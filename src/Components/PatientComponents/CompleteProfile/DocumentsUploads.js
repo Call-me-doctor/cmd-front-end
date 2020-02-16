@@ -15,27 +15,35 @@ class IdentityDetails extends React.Component {
                 [keyStrings.idCopy]: [],
             }
         }
+        
+        this.data = {
+            avatar: {name: '', value:''},
+            idCopy: {name: '', value:''},
+        }
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
-
-        const targets = event.target;
         let _errors = {};
         let isError = false;
-
-        if(!isError){
-            const data = {
-                [keyStrings.id]: targets[0],
-                [keyStrings.nationality]:  targets[1],
-            }
-            this.props.callBack("profilePicture", data);
+        console.log(!(this.data.avatar['name'] && this.data.avatar['value']))
+        if(!(this.data.avatar['name'] && this.data.avatar['value'])){
+            _errors[keyStrings.avatar] = ['invalid file'];
+            isError = true;
         }
 
-        this.setState({
-            errors:_errors
-        })
-        
+        if(!(this.data.idCopy['name'] && this.data.idCopy['value'])){
+            _errors[keyStrings.idCopy] = ['invalid file'];
+            isError = true;
+        }
+
+        if(!isError){
+            this.props.callBack("profilePicture", this.data);
+        } else {
+            this.setState({
+                errors:_errors
+            })
+        }        
     }
 
     processData = (key) => {
@@ -52,13 +60,64 @@ class IdentityDetails extends React.Component {
                 return 'default';
         }
     }
+
+    processProfilePhoto = (e, setImage) => {
+        const file = e.target.files[0];
+        const data = this.data;
+
+        if(file.type.indexOf("images/") && file.type){
+            let reader = new FileReader();
+
+
+            reader.onload = (function (f){
+                return function(e) { 
+                    setImage(e.target.result);
+                    data.avatar['name'] = file.name;
+                    data.avatar['value'] = e.target.result;
+                }
+            })(file)
+
+            reader.readAsDataURL(file);
+        } else {
+            window.alert("file must be an image")
+        }
+    }
+
+    processId = (e, setFilename) => {
+        const file = e.target.files[0];
+        const data = this.data;
+        console.log(file)
+
+        if((file.type.indexOf("images/") || file.type.indexOf("application/pdf")) && file.type){
+            let reader = new FileReader();
+
+
+            reader.onload = (function (f){
+                return function(e) { 
+                    data.idCopy['name'] = file.name;
+                    data.idCopy['value'] = e.target.result;
+                    if(file.name.length > 12){
+                        const name = file.name.substring(0,10) + '...';
+                        setFilename(name);
+                    } else {
+                        setFilename(file.name);
+                    }
+                }
+            })(file)
+
+            reader.readAsDataURL(file);
+        } else {
+            window.alert("file must be an image")
+        }
+    }
+
     render() { 
         return (
             <form id={this.props.formId} onSubmit={this.handleSubmit} method="post">
                 <label className="header f20">Documents Upload</label>
                 <label className="header f12">Documents should not exceed 1.5Mb in size</label>
-                <Avatar1 label="Profile Picture" id="profile-picture" />
-                <FileUpload1 label="Proof of ID" placeholder="Upload image" id="proof-of-id"/>
+                <Avatar1 label="Profile Picture" id="profile-picture" onChange={this.processProfilePhoto} errors={this.state.errors[keyStrings.avatar]}/>
+                <FileUpload1 label="Proof of ID" placeholder="Upload image" id="proof-of-id"  onChange={this.processId} errors={this.state.errors[keyStrings.idCopy]}/>
             </form>
         );
     }
