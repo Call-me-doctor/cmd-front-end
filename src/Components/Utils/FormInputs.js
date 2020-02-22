@@ -104,3 +104,17 @@ export const FileUpload1 = (props) => {
         </div>
     );
 }
+
+export const Checkbox1 = (props) => {
+    const errors = props.errors;
+    return (
+        <div className={`checkbox-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
+            <label class="container">{props.info}
+                <input type="checkbox" id={props.id}
+                    form={props.formId} />
+                <span class="checkmark"></span>
+            </label>
+            {errors ? errorList(errors):null}
+        </div>
+    );
+}

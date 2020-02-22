@@ -4,6 +4,7 @@ import {InputControl1} from '../../Utils/FormInputs';
 import ContactDetails from './ContactDetails';
 import IdentityDetails from './IdentityDetails';
 import DocumentsUploads from './DocumentsUploads';
+import Declaration from './Declaration';
 
 const numForm = 4;
 
@@ -11,13 +12,14 @@ const formIDs = [
     'ContactDetails',
     'IdentityDetails',
     'DocumentsUploads',
+    'Declaration',
 ];
 
 class CompleteProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            formID: 2,
+            formID: 3,
             showPrev: false,
             submitForm: false,
             data: {
@@ -35,21 +37,23 @@ class CompleteProfile extends React.Component {
                             data={this.state.data.contactDetails} 
                             callBack={(name,data)=>{this.formControlCallback(1, name,data)}} 
                             formId={formIDs[formID]}
-                        />
+                        />;
             case 1:
                 return <IdentityDetails 
                             data={this.state.data.identityDetails} 
                             callBack={(name,data)=>{this.formControlCallback(1, name,data)}} 
                             formId={formIDs[formID]}
-                        />
+                        />;
             case 2:
                 return <DocumentsUploads
                             data={this.state.data.documentUploads} 
                             callBack={(name,data)=>{this.formControlCallback(1, name,data)}} 
                             formId={formIDs[formID]}
-                        />
+                        />;
             case 3:
-                return <div>Form 4</div>
+                return <Declaration 
+                            formId={formIDs[formID]}
+                        />;
         
             default:
                 break;
