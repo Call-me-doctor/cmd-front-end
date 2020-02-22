@@ -26,7 +26,7 @@ class IdentityDetails extends React.Component {
         event.preventDefault();
         let _errors = {};
         let isError = false;
-        console.log(!(this.data.avatar['name'] && this.data.avatar['value']))
+
         if(!(this.data.avatar['name'] && this.data.avatar['value'])){
             _errors[keyStrings.avatar] = ['invalid file'];
             isError = true;
@@ -38,7 +38,7 @@ class IdentityDetails extends React.Component {
         }
 
         if(!isError){
-            this.props.callBack("profilePicture", this.data);
+            this.props.callBack("DocumentsUploads", this.data);
         } else {
             this.setState({
                 errors:_errors
@@ -80,13 +80,15 @@ class IdentityDetails extends React.Component {
             reader.readAsDataURL(file);
         } else {
             window.alert("file must be an image")
+            data.avatar['name'] = null;
+            data.avatar['value'] = null;
+            setImage(null);
         }
     }
 
     processId = (e, setFilename) => {
         const file = e.target.files[0];
         const data = this.data;
-        console.log(file)
 
         if((file.type.indexOf("images/") || file.type.indexOf("application/pdf")) && file.type){
             let reader = new FileReader();
@@ -108,6 +110,9 @@ class IdentityDetails extends React.Component {
             reader.readAsDataURL(file);
         } else {
             window.alert("file must be an image")
+            data.idCopy['name'] = null;
+            data.idCopy['value'] = null;
+            setFilename('');
         }
     }
 
