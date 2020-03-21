@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import * as components from './component-imports';
+import './index.scss';
 
 const routing = (
     <Router>
@@ -23,7 +24,7 @@ const routing = (
         <Route path="*" component={components.App} />
       </Switch>
     </Router>
-  )
+)
   ReactDOM.render(routing, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change

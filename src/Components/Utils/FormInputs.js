@@ -109,10 +109,10 @@ export const Checkbox1 = (props) => {
     const errors = props.errors;
     return (
         <div className={`checkbox-style-1 ${errors?errors.length <= 0? '': 'error':''}`}>
-            <label class="container">{props.info}
+            <label className="container">{props.info}
                 <input type="checkbox" id={props.id}
-                    form={props.formId} />
-                <span class="checkmark"></span>
+                    form={props.formId} onChange={props.callback}/>
+                <span className="checkmark"></span>
             </label>
             {errors ? errorList(errors):null}
         </div>

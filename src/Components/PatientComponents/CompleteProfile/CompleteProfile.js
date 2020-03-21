@@ -21,7 +21,7 @@ class CompleteProfile extends React.Component {
         this.state = { 
             formID: 3,
             showPrev: false,
-            submitForm: false,
+            submitForm: true,
             data: {
                 contactDetails:{},
                 identityDetails:{},
@@ -53,6 +53,7 @@ class CompleteProfile extends React.Component {
             case 3:
                 return <Declaration 
                             formId={formIDs[formID]}
+                            callBack={this.submitForm}
                         />;
         
             default:
@@ -77,6 +78,7 @@ class CompleteProfile extends React.Component {
             newShowPrev = true;
             newSubmitForm = false;
         }
+        newSubmitForm = true;
 
         this.setState({
             formID: newFormID,
@@ -96,9 +98,8 @@ class CompleteProfile extends React.Component {
     }
 
     submitForm = () => {
-        /* TODO
-        Post Request to an API
-        */
+        console.log("submitted data", this.state.data);
+        //redirect to patient home page
     }
 
     render() {
@@ -111,7 +112,7 @@ class CompleteProfile extends React.Component {
                         <div className="details-form">
                             {this.formLoader(this.state.formID)}
                             <div className="inline-buttons">
-                                {this.state.submitForm?<InputControl1 label="Submit" callBack={this.submitForm}/>:
+                                {this.state.submitForm?<InputControl1 formId={formIDs[this.state.formID]} label="Submit" />:
                                 <InputControl1 formId={formIDs[this.state.formID]} label="Next" />}
                                 {this.state.showPrev?<InputControl1 label="Back" callBack={()=>{this.formControlCallback(-1)}}/>:null}
                             </div>

@@ -143,6 +143,7 @@
 .checkbox-style-1 {
     display: flex;
     margin-bottom: 15px;
+    flex-flow: column;
 
     .container {
         display: block;
