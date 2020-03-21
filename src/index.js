@@ -20,7 +20,8 @@ const routing = (
         <Route exact path="/register" component={components.Register} />
         <Route exact path="/register/complete" component={components.RegistrationDone} />
         <Route exact path="/register/:user_type" render={(props) => <components.Register {...props} />} />
-        <Route exact path="/patient/completeprofile" component={components.PatientCompleteProfile} />} />
+        <Route exact path="/patient/completeprofile" component={components.PatientCompleteProfile} />} /> //auth
+        <Route exact path="/patient/home" component={components.PatientHome} />} /> //auth
         <Route path="*" component={components.App} />
       </Switch>
     </Router>

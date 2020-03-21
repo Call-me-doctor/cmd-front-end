@@ -6,3 +6,4 @@ export {default as Login} from './Components/Login/Login';
 export {default as Register} from './Components/Register/Register';
 export {default as RegistrationDone} from './Components/Register/RegistrationDone';
 export {default as PatientCompleteProfile} from './Components/PatientComponents/CompleteProfile/CompleteProfile';
+export {default as PatientHome} from './Components/PatientComponents/HomePage/HomePage';
