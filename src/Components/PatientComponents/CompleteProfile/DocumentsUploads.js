@@ -38,7 +38,7 @@ class IdentityDetails extends React.Component {
         }
 
         if(!isError){
-            this.props.callBack("DocumentsUploads", this.data);
+            this.props.callBack("documentUploads", this.data);
         } else {
             this.setState({
                 errors:_errors

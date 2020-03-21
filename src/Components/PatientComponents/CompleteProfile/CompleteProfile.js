@@ -19,9 +19,9 @@ class CompleteProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            formID: 3,
+            formID: 0,
             showPrev: false,
-            submitForm: true,
+            submitForm: false,
             data: {
                 contactDetails:{},
                 identityDetails:{},
@@ -78,7 +78,6 @@ class CompleteProfile extends React.Component {
             newShowPrev = true;
             newSubmitForm = false;
         }
-        newSubmitForm = true;
 
         this.setState({
             formID: newFormID,

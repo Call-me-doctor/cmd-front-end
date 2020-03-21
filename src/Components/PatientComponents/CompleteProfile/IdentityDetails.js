@@ -9,7 +9,7 @@ const keyStrings = {
 
 const IDOptions= [
     {key:'id', value:'ID Number'},
-    {key:'passport', value:'Password Number'},
+    {key:'passport', value:'Passport Number'},
 ]
 
 class IdentityDetails extends React.Component {
