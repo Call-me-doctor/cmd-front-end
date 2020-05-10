@@ -1,0 +1,24 @@
+{
+  "user": [{ "id": 1, "user": "Gift", "passwordHash": "hash" }],
+  "contactDetails": [
+    {
+      "id": 1,
+      "user": 1,
+      "cellphone": "0845555790",
+      "home_address": "999, Jorissen, Braamfontein, Johannesburg, 2000",
+      "emergency_number": "0819999477"
+    }
+  ],
+  "identityDetails": [
+    {
+      "id": 1,
+      "user": 1,
+      "type": "ID",
+      "id_number": "9656458585083",
+      "nationality": "South African",
+      "medical_aid": "None",
+      "profile_picture": "http://file_storage.com/user_id/picture_hash",
+      "id_image": "http://file_storage.com/user_id/id_hash"
+    }
+  ]
+}
