@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-
+import BackNavBar from './BackNavBar';
 class ViewAppointment extends Component {
   render() {
     return (
-      <div>
-        View Appointment
-      </div>
+      <BackNavBar label="Appointment" />
     );
   }
 }
