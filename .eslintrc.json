@@ -7,28 +7,29 @@
         "ecmaVersion": 2020,
         "ecmaFeatures": {
             "jsx": true
-          },
+        },
         "sourceType": "module"
     },
     "settings": {
-    "react": {
-        "version": "detect"
-    }
+        "react": {
+            "version": "detect"
+        }
     },
-
     "plugins": [
         "react"
     ],
-
     "extends": [
         "standard-jsx"
     ],
     "rules": {
-        "react/jsx-no-bind": ["error", {
-            "allowArrowFunctions": true,
-            "allowBind": false,
-            "ignoreRefs": true
-        }],
+        "react/jsx-no-bind": [
+            "error",
+            {
+                "allowArrowFunctions": true,
+                "allowBind": false,
+                "ignoreRefs": true
+            }
+        ],
         "react/no-did-update-set-state": "error",
         "react/no-unknown-property": "error",
         "react/no-unused-prop-types": "error",
@@ -153,7 +154,6 @@
         "no-confusing-arrow": "error",
         "no-continue": "error",
         "no-console": "off",
-        "no-div-regex": "error",
         "no-duplicate-imports": "error",
         "no-else-return": "error",
         "no-empty-function": "off",
@@ -282,7 +282,6 @@
         "require-atomic-updates": "error",
         "require-await": "error",
         "require-jsdoc": "error",
-        "require-unicode-regexp": "off",
         "rest-spread-spacing": "error",
         "semi": "error",
         "semi-spacing": "error",
@@ -336,7 +335,6 @@
         "valid-jsdoc": "error",
         "vars-on-top": "error",
         "wrap-iife": "error",
-        "wrap-regex": "error",
         "yield-star-spacing": "error",
         "yoda": "error"
     }
