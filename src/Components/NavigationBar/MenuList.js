@@ -28,7 +28,7 @@ class MenuList extends React.Component {
                     {this.menuItem(MENU_LIST.register, 'register')}
                     {this.menuItem(MENU_LIST.about, 'about')}
                     {this.menuItem(MENU_LIST.faqs, 'faqs')}
-                    {this.menuItem(MENU_LIST.terms_and_conditions, 'terms_and_conditions')}
+                    {this.menuItem(MENU_LIST.termsAndConditions, 'terms_and_conditions')}
                 </div>
                 <div className="toggle" onClick={this.props.toggle}>
                     

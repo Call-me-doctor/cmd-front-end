@@ -1,9 +1,9 @@
 export const MENU_LIST = {
-    about: 'About',
-    login: 'Login',
-    register: 'Register',
-    faqs: 'FAQs',
-    terms_and_conditions: 'Terms & Conditions',
+    about: `About`,
+    login: `Login`,
+    register: `Register`,
+    faqs: `FAQs`,
+    termsAndConditions: `Terms & Conditions`
 }
 
 export const LOREM = `Lorem ipsum dolor sit amet, 
@@ -17,4 +17,4 @@ export const LOREM = `Lorem ipsum dolor sit amet,
              voluptate velit esse cillum dolore eu fugiat 
              nulla pariatur. Excepteur sint occaecat 
              cupidatat non proident, sunt in culpa qui 
-             officia deserunt mollit anim id est laborum.`
+             officia deserunt mollit anim id est laborum.`;
