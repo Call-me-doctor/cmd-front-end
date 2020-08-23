@@ -22,6 +22,7 @@ const routing = (
       <Route exact path="/register/:user_type" render={(props) => <components.Register {...props} />} />
       <Route exact path="/patient/completeprofile" component={components.PatientCompleteProfile} />
       <Route exact path="/patient/home" component={components.PatientHome} />
+      <Route exact path="/patient/view-appointment/:appointment_id" component={components.ViewAppointment} />
       <Route path="*" component={components.App} />
     </Switch>
   </Router>
