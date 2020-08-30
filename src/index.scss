@@ -51,3 +51,23 @@ a {
   text-decoration: none;
   color: $link-text-color;
 }
+
+.avatar {
+  div {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.title {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  font-weight: 600;
+  font-size: 16px;
+}

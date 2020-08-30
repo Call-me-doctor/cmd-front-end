@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 
 class Avatar extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    const url = process.env.PUBLIC_URL + "/images/profile.png";
     return (
-      <div className="logo">
-        <a href="/"><img src={process.env.PUBLIC_URL + "/images/profile.png"} alt="logo" /></a>
+      <div className="avatar">
+        <div style={{ backgroundImage: `url(${url})` }} />
       </div>
     );
   }

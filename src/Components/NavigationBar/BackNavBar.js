@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { ArrowBack } from '@material-ui/icons';
-import Avatar from '../Avatar';
 
 class BackNavBar extends Component {
   constructor(props) {

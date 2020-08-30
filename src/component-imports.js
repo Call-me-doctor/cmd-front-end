@@ -7,4 +7,4 @@ export { default as Register } from './Components/Register/Register';
 export { default as RegistrationDone } from './Components/Register/RegistrationDone';
 export { default as PatientCompleteProfile } from './Components/PatientComponents/CompleteProfile/CompleteProfile';
 export { default as PatientHome } from './Components/PatientComponents/HomePage/HomePage';
-export { default as ViewAppointment } from './Components/ViewAppointment';
+export { default as ViewAppointment } from './Components/ViewAppointment/ViewAppointment';
