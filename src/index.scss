@@ -26,6 +26,15 @@ button {
   }
 }
 
+svg {
+  color: $text-color;
+}
+
+.nav-text {
+  color: $text-color;
+  font-size: 16px;
+}
+
 button:hover {
   border:  1px solid $text-color-fade;
 }

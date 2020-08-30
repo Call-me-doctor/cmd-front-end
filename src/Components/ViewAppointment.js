@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
-import BackNavBar from './BackNavBar';
+import React, { Component, Fragment } from 'react';
+import BackNavBar from './NavigationBar/BackNavBar';
 class ViewAppointment extends Component {
   render() {
     return (
-      <BackNavBar label="Appointment" />
+      <Fragment>
+        <BackNavBar label="Appointment" />
+        <div className="doctor-details">
+          <Avatar className />
+        </div>
+      </Fragment>
     );
   }
 }
