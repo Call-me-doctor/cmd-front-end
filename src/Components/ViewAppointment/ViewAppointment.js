@@ -3,10 +3,34 @@ import BackNavBar from '../NavigationBar/BackNavBar';
 import Avatar from '../Avatar';
 import Divider from '../Divider';
 import { LOREM } from '../../constants';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import './ViewAppointment.scss';
+import 'leaflet/dist/leaflet.css';
+
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import iconRetina from 'leaflet/dist/images/marker-icon-2x.png';
+let DefaultIcon = L.icon({
+  ...L.Icon.Default.prototype.options,
+  iconUrl: icon,
+  iconRetinaUrl: iconRetina,
+  shadowUrl: iconShadow
+});
+L.Marker.prototype.options.icon = DefaultIcon;
 
 class ViewAppointment extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      lat: -26.191518,
+      lng: 28.027568,
+      zoom: 100,
+    }
+  }
+
   render() {
+    const position = [this.state.lat, this.state.lng]
     return (
       <Fragment>
         <BackNavBar label="Appointment" />
@@ -31,7 +55,15 @@ class ViewAppointment extends Component {
           </div>
           <div className="detail">
             <label className="body-title">Hospital Location</label>
-            <div className="description">{LOREM}</div>
+            <div className="description">
+              <Map center={position} zoom={this.state.zoom} style={{ width: '100wh', height: '300px' }}>
+                <TileLayer
+                  attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={position}></Marker>
+              </Map>
+            </div>
           </div>
         </div>
       </Fragment>
