@@ -9,6 +9,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
 p {
   font-size: 18px;
 }
@@ -26,6 +31,15 @@ button {
   }
 }
 
+svg {
+  color: $text-color;
+}
+
+.nav-text {
+  color: $text-color;
+  font-size: 16px;
+}
+
 button:hover {
   border:  1px solid $text-color-fade;
 }
@@ -41,4 +55,35 @@ button:hover {
 a {
   text-decoration: none;
   color: $link-text-color;
+}
+
+.avatar {
+  div {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.title {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.body-title {
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+hr {
+  margin: 0;
 }

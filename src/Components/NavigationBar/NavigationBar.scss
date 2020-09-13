@@ -4,6 +4,7 @@
     min-height: $nav-bar-height;
     background-color: $bg-color;
     justify-content: space-between;
+    align-items: center;
     .logo-menu {
         display: flex;
         justify-content: space-between;
@@ -40,6 +41,18 @@
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.back-navbar {
+    justify-content: left;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    label {
+        margin: 0;
+        margin-left: 10px;
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 768px) {
