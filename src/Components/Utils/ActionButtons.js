@@ -6,7 +6,7 @@ import './CustomInputs.scss';
 class ActionButtons extends Component {
   render() {
     return (
-      <div className="action-buttons navbar nav-text">
+      <div className="navbar nav-text action-buttons">
         <Cancel />
         <Divider vertical color="#FFFC00" />
         <Save />

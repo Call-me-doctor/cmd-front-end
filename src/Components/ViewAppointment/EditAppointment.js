@@ -19,7 +19,7 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-class ViewAppointment extends Component {
+class EditAppointment extends Component {
   constructor() {
     super();
 
@@ -45,14 +45,14 @@ class ViewAppointment extends Component {
           </div>
         </div>
         <Divider />
-        <div className="view-appointment-details">
+        <div className="edit-appointment-details">
           <div className="detail">
             <label className="body-title">Affected Body Parts</label>
-            <div className="description">Head, nose</div>
+            <textarea className="description">Head, nose</textarea>
           </div>
           <div className="detail">
             <label className="body-title">Description</label>
-            <div className="description">{LOREM}</div>
+            <textarea className="description" style={{ height: '200px' }}>{LOREM}</textarea>
           </div>
           <div className="detail">
             <label className="body-title">Hospital Location</label>
@@ -67,9 +67,10 @@ class ViewAppointment extends Component {
             </div>
           </div>
         </div>
+        <ActionButtons />
       </Fragment>
     );
   }
 }
 
-export default ViewAppointment;
+export default EditAppointment;
