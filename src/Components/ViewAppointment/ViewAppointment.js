@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import ActionButtons from '../Utils/ActionButtons';
 import Avatar from '../Avatar';
 import BackNavBar from '../NavigationBar/BackNavBar';
 import Divider from '../Divider';
 import { LOREM } from '../../constants';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, TileLayer, Marker } from 'react-leaflet';
 import './ViewAppointment.scss';
 import 'leaflet/dist/leaflet.css';
 
