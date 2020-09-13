@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import BackNavBar from '../NavigationBar/BackNavBar';
+import ActionButtons from '../Utils/ActionButtons';
 import Avatar from '../Avatar';
+import BackNavBar from '../NavigationBar/BackNavBar';
 import Divider from '../Divider';
 import { LOREM } from '../../constants';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
@@ -66,6 +67,7 @@ class ViewAppointment extends Component {
             </div>
           </div>
         </div>
+        <ActionButtons />
       </Fragment>
     );
   }
